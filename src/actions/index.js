@@ -31,10 +31,13 @@ export function fetchPortfolio() {
                 data[0].map( (obj,key) => {
                     total.push({
                       title: obj.title.rendered,
-                      text: obj.content.rendered,
+                      article: obj.content.rendered,
                       media: obj.better_featured_image,
                       sizes: obj.better_featured_image.media_details.sizes,
-                      full: obj.better_featured_image.source_url
+                      full: obj.better_featured_image.source_url,
+                      github: obj.acf.github,
+                      demo: obj.acf.demo,
+                      description: obj.acf.description
                     });
                     dispatch(receivePortfolio(total))
                 });

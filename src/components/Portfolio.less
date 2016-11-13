@@ -1,10 +1,79 @@
 .portfolio-item {
   height:50rem;
+  &:hover {
+    .description {
+      opacity:1;
+    }
+  }
+  .description {
+    opacity:0;
+    transition:.3s ease-in-out all;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:center;
+    background-color: fade(#000,50%);
+    color:#fff;
+    b {
+      text-transform: uppercase;
+      font-weight:200;
+      font-size:4.7rem;
+    }
+    span {
+      font-weight:100;
+      font-size:2.3rem;
+      display:inline-block;
+      margin-top:1.5rem;
+    }
+  }
+  .links {
+    margin-top:4rem;
+    a {
+      display:inline-block;
+      margin-left:2rem;
+      margin-right:2rem;
+    }
+    .svg-icon {
+      opacity:.9;
+      transition:.3 all;
+      &:hover {
+        opacity:1;
+      }
+    }
+    .icon-github svg {
+      overflow:visible;
+      path {
+        fill: transparent;
+        stroke-width: 1.5rem;
+        stroke: #fff;
+      }
+    }
+    .icon-demo svg path {
+      fill: #fff;
+    }
+  }
 }
 
 .bg-image {
+  transition:0.4s all ease;
+  filter: grayscale(1);
+  &:hover {
+    filter: grayscale(0);
+    background-size:auto 120%;
+    background-position: center 90%;
+  }
   height:100%;
-  background-size:cover;
+  background-size:auto 110%;
   background-position:center center;
   background-repeat:no-repeat;
+}
+
+
+.svg-icon {
+  display:inline-block;
+  width:4.5rem;
+  svg {
+    width:100%;
+  }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import anime from 'animejs'
 import initAniEffects from '../animation/initAniEffects'
 import aniEffects from '../animation/aniEffects'
+import aniItemsRandom from '../animation/aniItemsRandom'
 
 function fadeIn(el) {
   el.style.opacity = 0;
@@ -24,14 +25,14 @@ class ASLogo extends React.Component {
 
   }
   componentDidMount(){
-
-
+    var logo = document.querySelector('#as-logo');
+    aniItemsRandom('#as-logo path');
   }
   render(){
     return(
     <div className="content content--1 as-logo-container">
 
-        <svg className="as-logo letters--effect-2 letters _transparent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299.314 299.315">
+        <svg id="as-logo" className="as-logo letters--effect-2 letters _transparent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299.314 299.315">
 
           <circle id="as-circle" cx="150" className="the-circle" cy="150" r="148" fill="#fff"  fillRule="evenodd" />
 

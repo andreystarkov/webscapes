@@ -1,0 +1,60 @@
+.contacts {
+  color:fade(#fff,50%);
+  font-size:2rem;
+  font-weight:100;
+  h3 {
+    font-weight:300;
+    text-transform:uppercase;
+    font-size:5rem;
+    color:#000;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align:center;
+  padding-top:10rem;
+  padding-bottom:10rem;
+  .contact-form {
+    margin-top:3rem;
+  }
+  input, button {
+    font-size:2rem;
+    padding:1rem 2rem;
+  }
+  input {
+    background-color:transparent;
+    transition:.3s ease-in-out all;
+    outline:0;
+    border:0;
+    font-weight:100;
+    border-bottom:1px solid #fff;
+    width:35rem;
+    color:#fff;
+    &:hover {
+      border-color: darken(#fff,50%);
+    }
+  }
+  button {
+    background-color: transparent;
+    outline:0;
+    border:1px solid fade(#fff,40%);
+    //border-radius:2px;
+    //border-bottom:3px solid darken(#EFDC05,8%);
+    color:fade(#fff,50%);
+    font-weight:200;
+    // text-transform:uppercase;
+    margin-left:1rem;
+    transition:.3s all;
+    &:hover {
+      color:#fff;
+      border-color:#fff;
+    }
+  }
+}
+
+
+.section-contacts {
+  text-align:center;
+  padding-top:6rem;
+  padding-bottom:6rem;
+}
