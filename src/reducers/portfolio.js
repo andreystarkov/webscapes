@@ -2,7 +2,7 @@ import { RECEIVE_PORTFOLIO } from '../actions';
 import Immutable from 'immutable';
 
 const defaultState = {
-    portfolio: []
+    items: []
 };
 
 export default function portfolio(state = defaultState, action) {
@@ -13,7 +13,7 @@ export default function portfolio(state = defaultState, action) {
             console.log('RECEIVE_PORTFOLIO: ', action.payload);
 
             return Object.assign({}, state, {
-                ...portfolio
+                items: portfolio
             });
 
         default:
