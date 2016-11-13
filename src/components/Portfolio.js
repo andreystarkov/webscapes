@@ -23,9 +23,7 @@ export class Portfolio extends Component {
         Items;
 
     if ( Source ) {
-        console.log('Source: ', Source);
         Items = Source.map( (obj,key) => {
-        console.log('Item: ',obj);
         return(
           <Col xs={12} md={6} lg={6} key={key}>
             <div className="portfolio-item">
@@ -40,7 +38,7 @@ export class Portfolio extends Component {
 
     return(
        <section className="section-portfolio">
-        <Grid fluid={{true}}>
+        <Grid fluid>
           <Row>
             {Items || ''}
           </Row>
